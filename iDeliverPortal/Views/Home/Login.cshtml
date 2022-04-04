@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Login Page";
+}
+
+<!-- Sign In Start -->
+<div class="container-fluid" ng-controller="loginCtrl">
+    <div class="row h-100 align-items-center justify-content-center" ng-if="page.loaded">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 position-relative">
+            <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>iDeliver</h3>
+                    <h3>Sign In</h3>
+                </div>
+
+                <div class="alert alert-danger" role="alert" ng-if="form.authenticated == false">
+                    {{form.message}}
+                </div>
+
+                <form name="loginForm" ng-submit="loginForm.$valid && submit($event)" novalidate>
+                    <div class="form-floating mb-3">
+                        <input id="txtUsername"
+                               name="username"
+                               type="text"
+                               class="form-control"
+                               ng-model="form.fields.username"
+                               autocomplete="off"
+                               autofocus
+                               ng-class="{'border border-danger':(loginForm.$submitted || loginForm.username.$touched) && loginForm.username.$error.required}"
+                               placeholder="Username"
+                               required />
+                        <label for="txtUsername">Username</label>
+                        <small class="text-danger" ng-show="(loginForm.$submitted || loginForm.username.$touched) && loginForm.username.$error.required">
+                            This field is requird !
+                        </small>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input id="txtPassword"
+                               name="password"
+                               ng-attr-type="{{ form.fields.show.password ? 'text' : 'password' }}"
+                               class="form-control"
+                               ng-model="form.fields.password"
+                               ng-class="{'border border-danger':(loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$error.required}"
+                               placeholder="Password"
+                               required />
+                        <label for="txtPassword">Password</label>
+                        <small class="text-danger" ng-show="(loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$error.required">
+                            This field is requird !
+                        </small>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="form-check">
+                            <input id="cbShowPassword"
+                                   type="checkbox"
+                                   class="form-check-input"
+                                   ng-model="form.fields.show.password" />
+
+                            <label class="form-check-label" for="cbShowPassword">Show password</label>
+                        </div>
+                        <a href="">Forgot Password</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sign In End -->
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/controllers/loginCtrl.js"></script>
+}

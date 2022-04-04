@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="da76c098-8192-45b3-a236-b3b352f24cb7" ChangeDateTime="02/14/2022 22:10:36">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f53375ff-bda7-4920-be97-76c0e7453a46" ChangeDateTime="02/14/2022 22:12:51">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[Modifid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ModifiedDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b7ffff44-22ae-48d2-b7e0-28f0fb82e410" ChangeDateTime="02/14/2022 22:14:15">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[Refrence]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Reference" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a43aae2e-feb3-46f8-80f9-d30fae347cae" ChangeDateTime="02/14/2022 22:14:23">
+    <Property Name="ElementName" Value="[dbo].[tblUsers].[Reference]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReferenceNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="904d7bee-571e-4d21-b9e6-ecc19b7ea388" ChangeDateTime="02/14/2022 22:57:51">
+    <Property Name="ElementName" Value="[dbo].[PasswordMD5]" />
+    <Property Name="ElementType" Value="SqlDmlTrigger" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[EncryptPassword_MD5]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7d993cb-0df5-47d1-86d6-1b34ad499c4c" ChangeDateTime="02/22/2022 21:22:17">
+    <Property Name="ElementName" Value="[dbo].[Trigger_tblUsers]" />
+    <Property Name="ElementType" Value="SqlDmlTrigger" />
+    <Property Name="ParentElementName" Value="[dbo].[tblUsers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[EncryptionPassword]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e0a8071f-12f7-4513-9622-2ade588102ee" ChangeDateTime="03/27/2022 17:51:53">
+    <Property Name="ElementName" Value="[dbo].[User].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+</Operations>
